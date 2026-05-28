@@ -275,51 +275,97 @@
   <section class="comparison reveal" id="comparison">
     <div class="section-container">
       <div class="section-label">Comparison</div>
-      <h2 class="section-title">Corporate tools vs SpeakPaste</h2>
+      <h2 class="section-title">Voice tools vs SpeakPaste</h2>
+      <p class="section-sub">A practical snapshot of Mac dictation and transcription tools, including the open-source project SpeakPaste is adapted from.</p>
       <div class="comparison-table-wrapper">
-        <table class="comparison-table" aria-label="Feature comparison between SpeakPaste and competitors">
+        <table class="comparison-table" aria-label="Feature comparison between SpeakPaste and other voice tools">
           <thead>
             <tr>
               <th scope="col">Feature</th>
               <th scope="col" class="col-speakpaste">SpeakPaste</th>
+              <th scope="col">Whispering</th>
               <th scope="col">Wispr Flow</th>
+              <th scope="col">Superwhisper</th>
+              <th scope="col">Aqua Voice</th>
+              <th scope="col">MacWhisper</th>
               <th scope="col">macOS Dictation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>Best for</td>
+              <td class="col-speakpaste"><span class="check">Free local-first dictation with pipelines</span></td>
+              <td>Open-source upstream foundation</td>
+              <td>Cloud convenience across devices</td>
+              <td>Premium local/cloud power users</td>
+              <td>Cloud dictation for technical writing</td>
+              <td>File transcription on Mac</td>
+              <td>Built-in baseline dictation</td>
+            </tr>
+            <tr>
               <td>Price</td>
-              <td class="col-speakpaste"><span class="check" aria-label="Free">Free</span></td>
-              <td><span class="cross" aria-label="Paid">$15/mo</span></td>
-              <td><span class="check" aria-label="Free">Free</span></td>
+              <td class="col-speakpaste"><span class="check">Free</span></td>
+              <td><span class="check">Free / bring keys</span></td>
+              <td><span class="neutral">Free limited; Pro paid</span></td>
+              <td><span class="neutral">Free tier; Pro paid</span></td>
+              <td><span class="neutral">Free words; Pro paid</span></td>
+              <td><span class="neutral">Free; one-time Pro</span></td>
+              <td><span class="check">Free</span></td>
             </tr>
             <tr>
-              <td>Local Processing</td>
-              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
-              <td><span class="cross" aria-label="No">✗</span></td>
-              <td><span class="neutral" aria-label="Partial">Partial</span></td>
+              <td>Local/offline transcription</td>
+              <td class="col-speakpaste"><span class="check">Yes</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="cross">No</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="cross">No</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="neutral">Partial</span></td>
             </tr>
             <tr>
-              <td>Transform Pipelines</td>
-              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
-              <td><span class="check" aria-label="Yes">✓</span></td>
-              <td><span class="cross" aria-label="No">✗</span></td>
+              <td>System-wide dictation</td>
+              <td class="col-speakpaste"><span class="check">Yes</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="check">Yes</span></td>
+              <td><span class="neutral">Basic</span></td>
+              <td><span class="check">Yes</span></td>
             </tr>
             <tr>
-              <td>RAM Usage</td>
-              <td class="col-speakpaste"><span class="check" aria-label="30MB">~30MB</span></td>
-              <td><span class="cross" aria-label="High">~800MB</span></td>
-              <td><span class="neutral" aria-label="Moderate">~150MB</span></td>
+              <td>Transform/post-processing</td>
+              <td class="col-speakpaste"><span class="check">Custom pipelines</span></td>
+              <td><span class="neutral">Provider workflows</span></td>
+              <td><span class="check">Command mode</span></td>
+              <td><span class="check">Modes/prompts</span></td>
+              <td><span class="check">Context-aware</span></td>
+              <td><span class="neutral">AI integrations</span></td>
+              <td><span class="cross">No</span></td>
             </tr>
             <tr>
-              <td>Works Offline</td>
-              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
-              <td><span class="cross" aria-label="No">✗</span></td>
-              <td><span class="neutral" aria-label="Limited">Limited</span></td>
+              <td>Source availability</td>
+              <td class="col-speakpaste"><span class="neutral">Private app; attribution published</span></td>
+              <td><span class="check">Open source</span></td>
+              <td><span class="cross">Closed source</span></td>
+              <td><span class="cross">Closed source</span></td>
+              <td><span class="cross">Closed source</span></td>
+              <td><span class="cross">Closed source</span></td>
+              <td><span class="cross">Closed source</span></td>
+            </tr>
+            <tr>
+              <td>Privacy posture</td>
+              <td class="col-speakpaste"><span class="check">Local by default; cloud optional</span></td>
+              <td><span class="check">Local or BYOK/cloud</span></td>
+              <td><span class="neutral">Service-based; privacy mode</span></td>
+              <td><span class="neutral">Local or cloud models</span></td>
+              <td><span class="neutral">Cloud processing</span></td>
+              <td><span class="check">Local by default</span></td>
+              <td><span class="neutral">Apple-managed</span></td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p class="comparison-note">Snapshot based on public product pages and SpeakPaste docs. Pricing and features can change.</p>
     </div>
   </section>
 

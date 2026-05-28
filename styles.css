@@ -700,24 +700,33 @@ kbd {
   overflow-x: auto;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table {
   width: 100%;
+  min-width: 1280px;
   border-collapse: collapse;
-  font-size: 14px;
-  white-space: nowrap;
+  font-size: 13px;
+  white-space: normal;
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: 16px 24px;
+  width: 150px;
+  padding: 16px 18px;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  line-height: 1.45;
+  vertical-align: middle;
 }
 
 .comparison-table th:first-child,
 .comparison-table td:first-child {
+  width: 190px;
+  position: sticky;
+  left: 0;
+  z-index: 2;
   text-align: left;
   color: var(--text-secondary);
   font-weight: 500;
@@ -734,6 +743,10 @@ kbd {
   background: var(--bg-card);
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.comparison-table thead th:first-child {
+  z-index: 3;
 }
 
 .col-speakpaste {
@@ -756,6 +769,13 @@ thead .col-speakpaste {
 .check  { color: var(--accent-green); font-weight: 600; }
 .cross  { color: var(--text-muted);   font-weight: 500; }
 .neutral { color: var(--accent-amber); font-weight: 500; }
+
+.comparison-note {
+  margin: 16px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
 
 /* ============================================
    Download Section
@@ -1026,8 +1046,13 @@ details[open] .gatekeeper-arrow { rotate: 180deg; }
 
   .btn--large { padding: 16px 24px; font-size: 15px; }
 
+  .comparison-table { min-width: 1120px; }
+
   .comparison-table th,
-  .comparison-table td { padding: 12px 16px; }
+  .comparison-table td { padding: 12px 14px; }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child { width: 160px; }
 }
 
 @media (max-width: 480px) {
