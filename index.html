@@ -595,8 +595,12 @@
               <h3>Troubleshooting</h3>
             </div>
             <details class="doc-details">
-              <summary>macOS says Accessibility is enabled, but typing still fails</summary>
-              <p>Remove SpeakPaste from <strong>Privacy &amp; Security</strong> > <strong>Accessibility</strong>, add it again from <code>/Applications</code>, enable the toggle, then restart SpeakPaste.</p>
+              <summary>macOS Permissions (Accessibility & Microphone)</summary>
+              <p>SpeakPaste now <strong>automatically handles common macOS permission bugs</strong>. If you update the app, macOS sometimes creates "ghost" signatures that break Accessibility permissions. SpeakPaste now detects updates and automatically resets these signatures behind the scenes. If you ever need to grant permissions, the app will automatically open the correct System Settings pane for you.</p>
+            </details>
+            <details class="doc-details">
+              <summary>App Translocation Warnings</summary>
+              <p>macOS runs downloaded apps in a read-only randomized folder (App Translocation) if they aren't moved properly. SpeakPaste will automatically detect this state and warn you. Simply move the app to your <strong>Applications</strong> folder to fix it.</p>
             </details>
             <details class="doc-details">
               <summary>Shortcuts are delayed or unreliable in the background</summary>
