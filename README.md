@@ -45,4 +45,4 @@ website/
 
 ## License
 
-MIT © 2026 Irfan
+© 2026 Khalid Irfan
