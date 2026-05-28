@@ -968,6 +968,29 @@ details[open] .gatekeeper-arrow { rotate: 180deg; }
   color: var(--text-muted);
 }
 
+.footer-attribution {
+  max-width: 760px;
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.footer-attribution p {
+  margin: 0;
+}
+
+.footer-attribution a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-attribution a:hover {
+  color: var(--text-primary);
+}
+
 /* ============================================
    Reduced Motion
    ============================================ */
