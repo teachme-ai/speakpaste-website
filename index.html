@@ -38,6 +38,7 @@
       <div class="nav-links">
         <a href="#features" class="nav-link">Features</a>
         <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#docs" class="nav-link">Docs</a>
         <a href="#download" class="nav-link">Download</a>
       </div>
       <a href="#download" class="nav-cta" id="nav-download-btn">
@@ -368,6 +369,174 @@
       <p class="comparison-note">Snapshot based on public product pages and SpeakPaste docs. Pricing and features can change.</p>
     </div>
   </section>
+
+  <!-- Documentation -->
+  <section class="docs-section reveal" id="docs">
+    <div class="section-container">
+      <div class="section-label">Documentation</div>
+      <h2 class="section-title">SpeakPaste guide</h2>
+      <p class="section-sub">A compact product manual distilled from the README, User Guide, architecture notes, and attribution docs.</p>
+
+      <div class="docs-layout">
+        <aside class="docs-nav" aria-label="Documentation sections">
+          <a href="#docs-start">Quick start</a>
+          <a href="#docs-recording">Recording</a>
+          <a href="#docs-engines">Engines</a>
+          <a href="#docs-transform">Pipelines</a>
+          <a href="#docs-history">History</a>
+          <a href="#docs-settings">Settings</a>
+          <a href="#docs-troubleshooting">Troubleshooting</a>
+          <a href="#docs-credits">Credits</a>
+        </aside>
+
+        <div class="docs-content">
+          <article class="doc-panel" id="docs-start">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">01</span>
+              <h3>Quick start</h3>
+            </div>
+            <ol class="doc-list doc-list--ordered">
+              <li>Download the DMG, open it, and drag SpeakPaste into <code>/Applications</code>.</li>
+              <li>Open SpeakPaste and allow macOS to launch the downloaded app.</li>
+              <li>Grant <strong>Accessibility</strong> permission in <strong>System Settings</strong> > <strong>Privacy &amp; Security</strong> > <strong>Accessibility</strong>.</li>
+              <li>Choose <strong>Whisper C++</strong> in transcription settings and download a recommended model, or connect a cloud API key.</li>
+              <li>Click into any text field, hold the dictation shortcut, speak, and release. SpeakPaste types the result at your cursor.</li>
+            </ol>
+            <p class="doc-note">Default docs mention push-to-talk shortcuts such as <kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> or configured alternatives. Use the shortcut shown in your app settings.</p>
+          </article>
+
+          <article class="doc-panel" id="docs-recording">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">02</span>
+              <h3>Recording modes and methods</h3>
+            </div>
+            <div class="doc-grid">
+              <div>
+                <h4>Modes</h4>
+                <ul class="doc-list">
+                  <li><strong>Push-to-talk:</strong> records only while you hold the shortcut. Best for email, messaging, and precise dictation.</li>
+                  <li><strong>Toggle recording:</strong> press once to start and once again to stop.</li>
+                  <li><strong>Voice activation:</strong> uses VAD to detect speech and pauses for hands-free sessions.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Capture methods</h4>
+                <ul class="doc-list">
+                  <li><strong>CPAL:</strong> native Rust audio capture into uncompressed WAV. Best reliability and local model compatibility.</li>
+                  <li><strong>FFmpeg:</strong> advanced shell-based recording for custom audio setups.</li>
+                  <li><strong>Browser API:</strong> lightweight compressed recording, useful for cloud APIs.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="doc-panel" id="docs-engines">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">03</span>
+              <h3>Transcription engines</h3>
+            </div>
+            <div class="engine-list">
+              <div><strong>Whisper C++</strong><span>Local, private, offline. Supports GGML/GGUF model files and is the recommended default.</span></div>
+              <div><strong>Parakeet</strong><span>Local NVIDIA ONNX model path for fast native transcription and auto-language behavior.</span></div>
+              <div><strong>Moonshine</strong><span>Local lightweight ONNX model for fast English dictation on lower-power machines.</span></div>
+              <div><strong>Speaches</strong><span>Self-hosted OpenAI-compatible local server for faster-whisper and multi-device local setups.</span></div>
+              <div><strong>Cloud APIs</strong><span>Optional OpenAI, Groq, Deepgram, Mistral, and ElevenLabs integrations for cloud transcription.</span></div>
+            </div>
+          </article>
+
+          <article class="doc-panel" id="docs-transform">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">04</span>
+              <h3>Transformations and post-processing</h3>
+            </div>
+            <p>SpeakPaste can copy text to the clipboard, type directly at the cursor, and optionally press Return after typing. Transformation pipelines run before output so your dictated text can be cleaned, rewritten, translated, or reformatted.</p>
+            <ul class="doc-list">
+              <li><strong>Find &amp; Replace:</strong> use exact text or regular expressions for predictable cleanup.</li>
+              <li><strong>AI prompts:</strong> send the transcript through OpenAI, Anthropic, Gemini, Groq, Mistral, OpenRouter, or a custom endpoint.</li>
+              <li><strong>Testing workspace:</strong> run sample input through a pipeline before applying it to live dictation.</li>
+              <li><strong>Run history:</strong> inspect inputs, outputs, step-by-step results, and errors for every transformation run.</li>
+            </ul>
+          </article>
+
+          <article class="doc-panel" id="docs-history">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">05</span>
+              <h3>Recordings and history</h3>
+            </div>
+            <ul class="doc-list">
+              <li>Review past recordings with transcript status, timestamps, and embedded audio playback.</li>
+              <li>Open the local database folder from the app when you need direct access to stored audio files.</li>
+              <li>Search history, bulk transcribe older clips, bulk delete recordings, or copy selected transcripts with a custom template.</li>
+              <li>Use placeholders such as <code>{{recordedAt}}</code> and <code>{{transcript}}</code> to compile journal-style or meeting-note exports.</li>
+            </ul>
+          </article>
+
+          <article class="doc-panel" id="docs-settings">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">06</span>
+              <h3>Preferences, privacy, and updates</h3>
+            </div>
+            <div class="doc-grid">
+              <div>
+                <h4>Preferences</h4>
+                <ul class="doc-list">
+                  <li>Launch SpeakPaste automatically at login.</li>
+                  <li>Keep configuration windows always on top while editing workflows.</li>
+                  <li>Configure sound effects, bitrates, sample rates, model paths, API keys, and shortcuts.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Privacy</h4>
+                <ul class="doc-list">
+                  <li>Local engines keep voice audio and raw transcripts on your Mac.</li>
+                  <li>Cloud engines are optional and require user-provided credentials.</li>
+                  <li>Opt-in analytics exclude voice audio, transcript content, API keys, and account identities.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="doc-panel" id="docs-troubleshooting">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">07</span>
+              <h3>Troubleshooting</h3>
+            </div>
+            <details class="doc-details">
+              <summary>macOS says Accessibility is enabled, but typing still fails</summary>
+              <p>Remove SpeakPaste from <strong>Privacy &amp; Security</strong> > <strong>Accessibility</strong>, add it again from <code>/Applications</code>, enable the toggle, then restart SpeakPaste.</p>
+            </details>
+            <details class="doc-details">
+              <summary>Shortcuts are delayed or unreliable in the background</summary>
+              <p>Switch the recording method to <strong>CPAL</strong>. Native Rust capture avoids macOS AppNap delays that can affect browser-based recording.</p>
+            </details>
+            <details class="doc-details">
+              <summary>Local model will not load</summary>
+              <p>Use whisper.cpp-compatible <code>.bin</code>, <code>.gguf</code>, or <code>.ggml</code> files. PyTorch <code>.pt</code> model files are not supported by the local engine.</p>
+            </details>
+            <details class="doc-details">
+              <summary>Browser API recordings will not transcribe locally</summary>
+              <p>Install FFmpeg or use CPAL. Local Whisper engines expect WAV input, and FFmpeg handles conversion from compressed browser recordings.</p>
+            </details>
+          </article>
+
+          <article class="doc-panel" id="docs-credits">
+            <div class="doc-panel-header">
+              <span class="doc-kicker">08</span>
+              <h3>Technology and credits</h3>
+            </div>
+            <ul class="doc-list">
+              <li><strong>Runtime:</strong> Tauri v2 with a native Rust shell.</li>
+              <li><strong>Audio and typing:</strong> CPAL for capture, whisper.cpp/transcribe-rs for local transcription, and Enigo for cursor typing.</li>
+              <li><strong>Interface:</strong> Svelte 5 and SvelteKit.</li>
+              <li><strong>Attribution:</strong> SpeakPaste is adapted from <a href="https://github.com/EpicenterHQ/epicenter/tree/main/apps/whispering" target="_blank" rel="noopener noreferrer">Whispering</a>, part of <a href="https://github.com/EpicenterHQ/epicenter" target="_blank" rel="noopener noreferrer">Epicenter</a> by <a href="https://github.com/braden-w" target="_blank" rel="noopener noreferrer">Braden Wong</a> and contributors.</li>
+              <li><strong>Upstream licensing:</strong> AGPL-3.0 and MIT license files are acknowledged in the SpeakPaste repository.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Download Section -->
   <section class="download-section reveal" id="download">

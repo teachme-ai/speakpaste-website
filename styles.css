@@ -778,6 +778,189 @@ thead .col-speakpaste {
 }
 
 /* ============================================
+   Documentation
+   ============================================ */
+.docs-section {
+  padding: 120px 24px;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border);
+}
+
+.docs-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 44px;
+}
+
+.docs-nav {
+  position: sticky;
+  top: 88px;
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.docs-nav a {
+  padding: 8px 10px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+
+.docs-nav a:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.05);
+}
+
+.docs-content {
+  display: grid;
+  gap: 16px;
+}
+
+.doc-panel {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.doc-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.doc-kicker {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: rgba(167,139,250,0.1);
+  color: var(--accent-violet);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doc-panel h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.doc-panel h4 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.doc-panel p {
+  color: var(--text-secondary);
+}
+
+.doc-panel a {
+  color: var(--accent-sky);
+  text-decoration: none;
+}
+
+.doc-panel a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.doc-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.doc-list--ordered {
+  counter-reset: docs;
+}
+
+.doc-list li::marker {
+  color: var(--accent-violet);
+}
+
+.doc-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(56,189,248,0.16);
+  border-radius: var(--radius-sm);
+  background: rgba(56,189,248,0.05);
+  font-size: 14px;
+}
+
+.doc-panel code {
+  padding: 2px 5px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  font-size: 0.9em;
+}
+
+.engine-list {
+  display: grid;
+  gap: 10px;
+}
+
+.engine-list > div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.engine-list > div:last-child {
+  border-bottom: 0;
+}
+
+.engine-list strong {
+  color: var(--text-primary);
+}
+
+.engine-list span {
+  color: var(--text-secondary);
+}
+
+.doc-details {
+  border-top: 1px solid var(--border);
+}
+
+.doc-details:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-details summary {
+  cursor: pointer;
+  padding: 16px 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.doc-details p {
+  padding: 0 0 16px;
+}
+
+/* ============================================
    Download Section
    ============================================ */
 .download-section {
@@ -1053,9 +1236,33 @@ details[open] .gatekeeper-arrow { rotate: 180deg; }
 
   .comparison-table th:first-child,
   .comparison-table td:first-child { width: 160px; }
+
+  .docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-nav {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doc-panel {
+    padding: 22px;
+  }
+
+  .doc-grid,
+  .engine-list > div {
+    grid-template-columns: 1fr;
+  }
+
+  .engine-list > div {
+    gap: 4px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; width: 100%; }
   .btn { width: 100%; justify-content: center; }
+  .docs-nav { grid-template-columns: 1fr; }
+  .doc-panel { padding: 18px; }
 }
