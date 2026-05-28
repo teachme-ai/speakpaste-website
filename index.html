@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeakPaste — Press. Speak. Paste.</title>
+  <meta name="description" content="SpeakPaste is a premium, privacy-first voice dictation utility for macOS. 100% local Whisper transcription. No cloud. No subscriptions. Just speak." />
+  <meta name="keywords" content="voice dictation, macOS, whisper, speech to text, privacy, local AI, speakpaste" />
+  <meta property="og:title" content="SpeakPaste — Press. Speak. Paste." />
+  <meta property="og:description" content="100% local voice dictation for macOS. Press Fn, speak, and your words instantly appear wherever you're typing." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="SpeakPaste home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="13" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <circle cx="14" cy="14" r="4" fill="url(#logoGrad)"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a78bfa"/>
+                <stop offset="1" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">SpeakPaste</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#download" class="nav-link">Download</a>
+      </div>
+      <a href="#download" class="nav-cta" id="nav-download-btn">
+        Download Free
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" id="version-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        v0.1.0 — Free &amp; Open Source
+      </div>
+
+      <h1 class="hero-title">
+        Press <span class="hero-key">Fn</span> · Speak · <span class="gradient-text">Paste</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Premium voice dictation for macOS. Your words appear instantly, anywhere you type —
+        powered entirely by on-device AI. No cloud. No subscription. No surveillance.
+      </p>
+
+      <!-- Animated Waveform -->
+      <div class="waveform-container" aria-label="Voice waveform animation" role="img">
+        <div class="waveform-rings" aria-hidden="true">
+          <div class="ring ring--1"></div>
+          <div class="ring ring--2"></div>
+          <div class="ring ring--3"></div>
+          <div class="ring ring--4"></div>
+        </div>
+        <div class="waveform-bars" aria-hidden="true">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="waveform-mic" aria-hidden="true">
+          <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
+            <rect x="7" y="1" width="10" height="18" rx="5" fill="url(#micGrad)"/>
+            <path d="M2 16c0 5.523 4.477 10 10 10s10-4.477 10-10" stroke="url(#micGrad)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="26" x2="12" y2="31" stroke="url(#micGrad)" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="micGrad" x1="0" y1="0" x2="24" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a78bfa"/>
+                <stop offset="1" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <a href="public/SpeakPaste_0.1.0_universal.dmg" class="btn btn--primary" id="hero-download-btn" download>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 13L6 9h3V3h2v6h3l-4 4z" fill="currentColor"/>
+            <path d="M3 15h14v2H3v-2z" fill="currentColor"/>
+          </svg>
+          Download for macOS
+          <span class="btn-sub">Free · Universal · macOS 10.15+</span>
+        </a>
+        <a href="https://github.com/teachme-ai/speakpaste" class="btn btn--secondary" id="github-link" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10C20 4.477 15.523 0 10 0z" fill="currentColor"/>
+          </svg>
+          View Source
+        </a>
+      </div>
+
+      <!-- Social proof pill -->
+      <p class="hero-note">macOS only · No account required · Zero telemetry</p>
+    </div>
+  </header>
+
+  <!-- How it Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-label">Workflow</div>
+      <h2 class="section-title">Three steps. Every time.</h2>
+      <p class="section-sub">No modes. No menus. No waiting. Just a reflex.</p>
+
+      <ol class="steps" aria-label="How SpeakPaste works">
+        <li class="step reveal">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect x="4" y="18" width="20" height="8" rx="2" fill="url(#s1g)"/>
+              <rect x="10" y="6" width="8" height="10" rx="4" fill="url(#s1g)"/>
+              <defs><linearGradient id="s1g" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title">Press <kbd>Fn</kbd></h3>
+            <p class="step-desc">Hold the Fn key to start recording. A floating waveform overlay appears at the edge of your screen, indicating SpeakPaste is listening.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="10" r="5" fill="url(#s2g)"/>
+              <path d="M4 22c0-5.523 4.477-8 10-8s10 2.477 10 8" stroke="url(#s2g)" stroke-width="2" stroke-linecap="round"/>
+              <defs><linearGradient id="s2g" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title">Speak naturally</h3>
+            <p class="step-desc">Dictate in any language. Release Fn when done. Whisper C++ processes your audio locally on your Mac's GPU using Apple Metal — no internet needed.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M6 8h16M6 14h10M6 20h12" stroke="url(#s3g)" stroke-width="2" stroke-linecap="round"/>
+              <defs><linearGradient id="s3g" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title">Text appears instantly</h3>
+            <p class="step-desc">Your transcribed text is typed directly at your active cursor — inside any app, any field, any window. Slack, Notion, Xcode, Terminal — it just works.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-label">Why SpeakPaste</div>
+      <h2 class="section-title">Built for people who care about privacy.</h2>
+      <p class="section-sub">Corporate voice tools send your audio to the cloud. SpeakPaste never leaves your Mac.</p>
+
+      <div class="features-grid" role="list">
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L6 7v9c0 6 4.5 11.3 10 12.9C21.5 27.3 26 22 26 16V7L16 3z" fill="url(#f1g)" opacity="0.15"/>
+              <path d="M16 3L6 7v9c0 6 4.5 11.3 10 12.9C21.5 27.3 26 22 26 16V7L16 3z" stroke="url(#f1g)" stroke-width="1.5"/>
+              <path d="M11 16l3 3 7-7" stroke="url(#f1g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs><linearGradient id="f1g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">100% On-Device AI</h3>
+          <p class="feature-desc">Powered by whisper.cpp with Apple Metal GPU acceleration. Your voice audio never leaves your Mac — not even for a millisecond.</p>
+          <div class="feature-stat">~30MB RAM</div>
+        </article>
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="url(#f2g)" stroke-width="1.5"/>
+              <path d="M10 16l4 4 8-8" stroke="url(#f2g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs><linearGradient id="f2g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#34d399"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">No Subscription, Ever</h3>
+          <p class="feature-desc">Free forever. No API keys required. No account. No credit card. No "free tier" that expires. SpeakPaste is fully open-source and always will be.</p>
+          <div class="feature-stat">$0/month</div>
+        </article>
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M8 20V12a8 8 0 0116 0v8" stroke="url(#f3g)" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="5" y="20" width="22" height="8" rx="4" fill="url(#f3g)" opacity="0.15"/>
+              <rect x="5" y="20" width="22" height="8" rx="4" stroke="url(#f3g)" stroke-width="1.5"/>
+              <defs><linearGradient id="f3g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">Works Everywhere</h3>
+          <p class="feature-desc">Types at your cursor in any macOS app — browsers, IDEs, email clients, messengers, terminals. Uses macOS Accessibility APIs to be universally compatible.</p>
+          <div class="feature-stat">Any App</div>
+        </article>
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M6 12h20M6 20h14" stroke="url(#f4g)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="24" cy="20" r="4" fill="url(#f4g)" opacity="0.2"/>
+              <circle cx="24" cy="20" r="4" stroke="url(#f4g)" stroke-width="1.5"/>
+              <defs><linearGradient id="f4g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">Transform Pipelines</h3>
+          <p class="feature-desc">Chain GPT post-processing steps to your transcription. Auto-fix punctuation, reformat as bullet points, translate languages, or run custom prompts on every result.</p>
+          <div class="feature-stat">Unlimited Rules</div>
+        </article>
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="8" width="24" height="16" rx="3" stroke="url(#f5g)" stroke-width="1.5"/>
+              <path d="M10 16h12M16 12v8" stroke="url(#f5g)" stroke-width="1.5" stroke-linecap="round"/>
+              <defs><linearGradient id="f5g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multiple AI Models</h3>
+          <p class="feature-desc">Choose from whisper.cpp (offline), Parakeet (ultra-fast), or Moonshine (efficient). Or connect OpenAI Whisper API and OpenRouter for cloud-assisted transcription.</p>
+          <div class="feature-stat">5 Engines</div>
+        </article>
+
+        <article class="feature-card reveal" role="listitem">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="url(#f6g)" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <path d="M16 10v6l4 2" stroke="url(#f6g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs><linearGradient id="f6g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+            </svg>
+          </div>
+          <h3 class="feature-title">Lightning Fast</h3>
+          <p class="feature-desc">Metal GPU acceleration means small Whisper models transcribe in under a second. No loading spinners, no waiting. Speak and paste before you lift your finger from Fn.</p>
+          <div class="feature-stat">&lt;1s Latency</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison reveal" id="comparison">
+    <div class="section-container">
+      <div class="section-label">Comparison</div>
+      <h2 class="section-title">Corporate tools vs SpeakPaste</h2>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table" aria-label="Feature comparison between SpeakPaste and competitors">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col" class="col-speakpaste">SpeakPaste</th>
+              <th scope="col">Wispr Flow</th>
+              <th scope="col">macOS Dictation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td class="col-speakpaste"><span class="check" aria-label="Free">Free</span></td>
+              <td><span class="cross" aria-label="Paid">$15/mo</span></td>
+              <td><span class="check" aria-label="Free">Free</span></td>
+            </tr>
+            <tr>
+              <td>Local Processing</td>
+              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
+              <td><span class="cross" aria-label="No">✗</span></td>
+              <td><span class="neutral" aria-label="Partial">Partial</span></td>
+            </tr>
+            <tr>
+              <td>Transform Pipelines</td>
+              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
+              <td><span class="check" aria-label="Yes">✓</span></td>
+              <td><span class="cross" aria-label="No">✗</span></td>
+            </tr>
+            <tr>
+              <td>Open Source</td>
+              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
+              <td><span class="cross" aria-label="No">✗</span></td>
+              <td><span class="cross" aria-label="No">✗</span></td>
+            </tr>
+            <tr>
+              <td>RAM Usage</td>
+              <td class="col-speakpaste"><span class="check" aria-label="30MB">~30MB</span></td>
+              <td><span class="cross" aria-label="High">~800MB</span></td>
+              <td><span class="neutral" aria-label="Moderate">~150MB</span></td>
+            </tr>
+            <tr>
+              <td>Works Offline</td>
+              <td class="col-speakpaste"><span class="check" aria-label="Yes">✓</span></td>
+              <td><span class="cross" aria-label="No">✗</span></td>
+              <td><span class="neutral" aria-label="Limited">Limited</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download-section reveal" id="download">
+    <div class="section-container">
+      <div class="download-card">
+        <div class="download-glow" aria-hidden="true"></div>
+        <div class="download-content">
+          <h2 class="download-title">Download SpeakPaste</h2>
+          <p class="download-sub">Free, forever. macOS 10.15 Catalina and later. Universal binary (Apple Silicon + Intel).</p>
+
+          <a href="public/SpeakPaste_0.1.0_universal.dmg" class="btn btn--primary btn--large" id="download-main-btn" download>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 16L7 11h4V4h2v7h4l-5 5z" fill="currentColor"/>
+              <path d="M4 18h16v2H4v-2z" fill="currentColor"/>
+            </svg>
+            Download for macOS — Free
+            <span class="btn-sub">v0.1.0 · Universal Binary · ~15MB</span>
+          </a>
+
+          <a href="https://github.com/teachme-ai/speakpaste" class="btn btn--ghost" id="source-link" target="_blank" rel="noopener noreferrer">
+            View source on GitHub →
+          </a>
+
+          <!-- Gatekeeper Bypass -->
+          <details class="gatekeeper" id="gatekeeper-section">
+            <summary class="gatekeeper-summary">
+              <span class="gatekeeper-icon" aria-hidden="true">🛡️</span>
+              macOS says "unidentified developer"? Here's the fix.
+              <span class="gatekeeper-arrow" aria-hidden="true">▾</span>
+            </summary>
+            <div class="gatekeeper-body">
+              <p>Because SpeakPaste is distributed outside the Mac App Store, macOS Gatekeeper may block it. This is normal for open-source apps. There are two options:</p>
+
+              <div class="gatekeeper-option">
+                <h4>Option A — One-command terminal fix (recommended)</h4>
+                <p>After moving SpeakPaste to your Applications folder, run this in Terminal:</p>
+                <div class="code-block" id="gatekeeper-cmd">
+                  <code>xattr -d com.apple.quarantine /Applications/SpeakPaste.app</code>
+                  <button class="copy-btn" onclick="copyGatekeeperCmd()" aria-label="Copy terminal command">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v6A1.5 1.5 0 003.5 11H5" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="gatekeeper-option">
+                <h4>Option B — Right-click to open</h4>
+                <p>Right-click (or Control-click) the app in Finder and choose <strong>Open</strong>. Click <strong>Open</strong> again in the confirmation dialog. This only needs to be done once.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">SpeakPaste</span>
+        <span class="footer-tagline">Privacy-first voice dictation for macOS</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://github.com/teachme-ai/speakpaste" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/teachme-ai/speakpaste/issues" class="footer-link" target="_blank" rel="noopener noreferrer">Issues</a>
+        <a href="https://github.com/teachme-ai/speakpaste/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener noreferrer">License</a>
+      </nav>
+      <p class="footer-copy">© 2026 Irfan · MIT License · Built with whisper.cpp &amp; Tauri</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
