@@ -1,22 +1,22 @@
-# SpeakPaste Website
+# Mynah Website
 
-The official marketing landing page for **SpeakPaste** — a premium, privacy-first voice dictation utility for macOS.
+The official marketing landing page for **Mynah** — a premium, privacy-first voice dictation utility for macOS.
 
 ## 🌐 Live Site
 
-Deployed via Vercel. Visit the live site to download SpeakPaste for free.
+Deployed via Vercel. Visit the live site to download Mynah for free.
 
 ## 📦 Adding a New Release
 
 1. Build the DMG from the main repo:
    ```bash
-   cd /path/to/speakpaste/apps/speakpaste
+   cd /path/to/mynah/apps/mynah
    bun run tauri build
    ```
 
 2. Copy the output DMG into `public/`:
    ```bash
-   cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/SpeakPaste_*.dmg public/
+   cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/Mynah_*.dmg public/
    ```
 
 3. Update the version number in `index.html` (search for `v0.1.0`).

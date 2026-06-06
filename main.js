@@ -1,4 +1,4 @@
-/* main.js — SpeakPaste Landing Page */
+/* main.js — Mynah Landing Page */
 
 // --- Scroll-driven nav transparency ---
 const nav = document.getElementById('nav');
@@ -37,7 +37,7 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
 // --- Copy gatekeeper command ---
 function copyGatekeeperCmd() {
-  const cmd = 'xattr -d com.apple.quarantine /Applications/SpeakPaste.app';
+  const cmd = 'xattr -d com.apple.quarantine /Applications/Mynah.app';
   navigator.clipboard.writeText(cmd).then(() => {
     const label = document.querySelector('.copy-label');
     if (label) {
@@ -74,6 +74,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // --- Track download button clicks (console only — no analytics) ---
 document.querySelectorAll('[id$="-download-btn"]').forEach((btn) => {
   btn.addEventListener('click', () => {
-    console.log('[SpeakPaste] Download initiated');
+    console.log('[Mynah] Download initiated');
   });
 });
