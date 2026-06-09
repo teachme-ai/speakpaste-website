@@ -1,6 +1,6 @@
 # 🚀 Mynah LinkedIn Launch Kit — User-Focused Playbook
 
-Your complete LinkedIn launch package, optimized for the **v0.1.1 Apple Silicon** release, custom domain **mynah.online**, and designed around daily quality-of-life benefits for everyday Mac users.
+Your complete LinkedIn launch package, optimized for the **v0.1.1 Apple Silicon** release, custom domain **mynah.site**, and designed around daily quality-of-life benefits for everyday Mac users.
 
 ---
 
@@ -54,7 +54,7 @@ We are launching our free public beta under a permissive MIT license, powered by
 Just press the "Fn" key, speak, release, and watch your words appear.
 
 Check out the launch, download the Apple Silicon DMG, or get involved here:
-👉 https://mynah.online
+👉 https://mynah.site
 
 Open-source is about putting control back in the hands of the user. I'd love to hear your feedback!
 
@@ -65,5 +65,5 @@ Open-source is about putting control back in the hands of the user. I'd love to 
 
 ## 💡 Quick Launch Tips
 
-1. **LinkedIn Link Preview**: LinkedIn sometimes limits organic reach if external links are in the main post text. A common trick is to remove the link from the post, write *"Link to download is in the first comment! 👇"*, and put `https://mynah.online` as the very first comment after posting.
+1. **LinkedIn Link Preview**: LinkedIn sometimes limits organic reach if external links are in the main post text. A common trick is to remove the link from the post, write *"Link to download is in the first comment! 👇"*, and put `https://mynah.site` as the very first comment after posting.
 2. **Post Format**: Upload the **Features Infographic (v8)** directly as the primary image attachments to your post to draw people in as they scroll.

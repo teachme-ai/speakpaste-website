@@ -34,8 +34,8 @@ A highly detailed blueprint and storyboard to record, edit, and export a profess
 * **Voiceover**: *"If macOS says the developer is unidentified, just right-click to open it, or copy the single command from our website. Everything runs 100% locally on your Mac's GPU—no data ever leaves your machine."*
 
 ### Scene 5 — Outro & CTA (0:50 - 1:00)
-* **Visual**: Zoom in on the main title card of the website: **mynah.online**.
-* **Voiceover**: *"No clouds, no latency, no subscription. Download Mynah for free today at mynah.online."*
+* **Visual**: Zoom in on the main title card of the website: **mynah.site**.
+* **Voiceover**: *"No clouds, no latency, no subscription. Download Mynah for free today at mynah.site."*
 
 ---
 
